@@ -28,7 +28,7 @@ class BarController extends Controller {
                 ->withReferrer($site->referrers[0])
                 ->withSticky(false);
             $response = Response::make($html);
-            $response->header('Access-Control-Allow-Origin', '*');
+            $response = $this->allowOriginHeaders($response);
             return $response;
         } catch (\Exception $e) {
             return $this->returnNothing();
@@ -38,7 +38,16 @@ class BarController extends Controller {
     public function returnNothing()
     {
         $response = Response::make('');
+        $response = $this->allowOriginHeaders($response);
+
+        return $response;
+    }
+
+    public function allowOriginHeaders($response)
+    {
+        $response->header('P3P', 'CP="CAO DSP COR CURa ADMa DEVa OUR IND PHY ONL UNI COM NAV INT DEM PRE IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"');
         $response->header('Access-Control-Allow-Origin', '*');
+        $response->header('Access-Control-Allow-Headers', 'P3P, Content-Type, Origin');
         return $response;
     }
 
