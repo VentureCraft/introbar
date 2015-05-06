@@ -1,0 +1,19 @@
+{
+  "name": "introbar",
+  "version": "0.0.0",
+  "homepage": "https://github.com/VentureCraft/introbar",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2"
+  }
+}

@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+elixir.config.sourcemaps = false;
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +13,22 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+
+    mix.sass([
+        'frontend.scss'
+    ]);
+
+
+    mix.scripts([
+        '../../../bower_components/modernizr/modernizr.js',
+        '../../../bower_components/jquery/dist/jquery.js',
+        '../../../bower_components/fastclick/lib/fastclick.js',
+        '../../../bower_components/foundation/js/foundation/foundation.js',
+        'frontend.js'
+    ], 'public/js/frontend.js');
+
+    mix.version([
+        'public/css/frontend.css',
+        'public/js/frontend.js'
+    ]);
 });
