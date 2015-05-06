@@ -11,12 +11,13 @@
                          {
                             color: #fff;
 
+
                         }
 
                         #the-intro-bar #ib-content #ib-message {
                             color: #00797a;
+                            font-weight: bold;
 
-                            font-weight: normal;
                         }
     </style>
 @stop

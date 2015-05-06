@@ -23,9 +23,15 @@
             @else
             <div class="row">
 
-                            <div class="columns medium-offset-6 medium-6">
-                                                <a class="button expand tiny secondary radius" href="{{ route('dashboard') }}">Your Dashboard</a>
+
+
+                            <div class="columns medium-6">
+                                                <a class="button expand tiny radius" href="{{ route('dashboard') }}">Your Dashboard</a>
                                             </div>
+
+                                              <div class="columns medium-6">
+                                                                                                            <a class="button expand secondary tiny radius" href="/auth/logout">Logout</a>
+                                                                                                        </div>
                         </div>
             @endif
 

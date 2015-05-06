@@ -28,11 +28,12 @@
             font-size: 24px;
             color: #FFF;
         }
-        #the-intro-bar #ib-content p#ib-header{
+        #the-intro-bar #ib-content #ib-header{
             font-weight: bold;
             font-size: 30px;
+            line-height: 38px;
         }
-        #the-intro-bar #ib-content p#ib-message{
+        #the-intro-bar #ib-content #ib-message{
             font-size: 20px;
         }
         #the-intro-bar p {
