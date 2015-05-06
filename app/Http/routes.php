@@ -29,7 +29,7 @@ Route::group([
 Route::group([
     'middleware' => 'auth'
 ], function(){
-    Route::get('home', ['uses' => 'HomeController@index', 'as' => 'dashboard']);
+    Route::get('home', ['uses' => 'DashboardController@index', 'as' => 'dashboard']);
     Route::post('site/{site_uid}/setupPayment', ['uses' => 'PaymentController@setupPayment', 'as' => 'site.setup_billing']);
     Route::delete('site/{site_uid}/cancelBilling', ['uses' => 'PaymentController@cancelBilling', 'as' => 'site.cancel_billing']);
 

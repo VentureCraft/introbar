@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
 
     /*
@@ -35,7 +35,7 @@ class HomeController extends Controller
     {
         $site = Auth::user()->sites->first();
 
-        return view('home')
+        return view('manage.dashboard')
             ->withSite($site);
     }
 

@@ -48,9 +48,7 @@ $input-border-radius: 3;
 @import "includes/spectrum";
 
 $transition-duration: 0.4s;
-$transition-timing-function: cubic-bezier(.55,0,.1,1);
-
-
+$transition-timing-function: cubic-bezier(.55, 0, .1, 1);
 
 body {
   -webkit-font-smoothing: $font-smoothing;
@@ -58,25 +56,25 @@ body {
 
 #introbar {
 
-    padding: rem-calc(40 0);
-    background-color: $primary-color;
+  padding: rem-calc(40 0);
+  background-color: $primary-color;
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
 }
 
 #header {
 
-    padding: rem-calc(40 0);
+  padding: rem-calc(40 0);
 
-    .logo {
+  .logo {
 
-        display: block;
-        width: 100px;
-        height: 24px;
-    }
+    display: block;
+    width: 100px;
+    height: 24px;
+  }
 
 }
 
@@ -93,21 +91,19 @@ body {
 
 #example {
 
-    padding: rem-calc(40 0 0 0);
+  padding: rem-calc(40 0 0 0);
   background-color: $primary-color;
-
-
 
   .example-image {
 
   }
 
-    h4 {
-      margin-top: rem-calc(40);
-      font-size: rem-calc(22);
-      color: $white;
-      margin-bottom: rem-calc(20);
-    }
+  h4 {
+    margin-top: rem-calc(40);
+    font-size: rem-calc(22);
+    color: $white;
+    margin-bottom: rem-calc(20);
+  }
 
 }
 
@@ -130,7 +126,10 @@ body {
 
     .site {
 
+    }
 
+    h4 {
+      margin: rem-calc(80 0 0)
     }
 
   }
@@ -147,8 +146,8 @@ body {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-  text-align: center;
-    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto 20px;
     padding: rem-calc(45 0 0 0);
 
     .amount {
@@ -169,16 +168,15 @@ body {
 }
 
 #footer {
-    border-top: 1px solid scale_color($secondary-color, $lightness: 80%);
-    padding: rem-calc(40 0);
+  border-top: 1px solid scale_color($secondary-color, $lightness: 80%);
+  padding: rem-calc(40 0);
 
-    p {
-        margin: 0;
-        font-size: rem-calc(14);
-        color: scale_color($secondary-color, $lightness: 40%);
-    }
+  p {
+    margin: 0;
+    font-size: rem-calc(14);
+    color: scale_color($secondary-color, $lightness: 40%);
+  }
 }
-
 
 .referrer {
   background-color: #FEFEFE;
