@@ -1,11 +1,10 @@
 <?php
 
 return [
-
-    'hackernews' =>
+    'techcrunch' =>
         [
-            'name' => 'Hacker News',
-            'domain' => 'ycombinator'
+            'name' => 'TechCrunch',
+            'domain' => 'techcrunch'
         ],
 
     'mashable' =>
@@ -14,25 +13,13 @@ return [
             'domain' => 'mashable'
         ],
 
-    'nytimes' =>
-        [
-            'name' => 'New York Times',
-            'domain' => 'nytimes'
-        ],
-
     'producthunt' =>
         [
             'name' => 'ProductHunt',
             'domain' => 'producthunt'
         ],
 
-    'reddit' =>
-        [
-            'name' => 'Reddit',
-            'domain' => 'reddit'
-        ],
-
-    'theverge' =>
+    'verge' =>
         [
             'name' => 'The Verge',
             'domain' => 'verge'
@@ -44,10 +31,39 @@ return [
             'domain' => 'thenextweb'
         ],
 
-    'techcrunch' =>
+    'nytimes' =>
         [
-            'name' => 'TechCrunch',
-            'domain' => 'techcrunch'
+            'name' => 'New York Times',
+            'domain' => 'nytimes'
         ],
 
+    'reddit' =>
+        [
+            'name' => 'Reddit',
+            'domain' => 'reddit'
+        ],
+
+    'hackernews' =>
+        [
+            'name' => 'Hacker News',
+            'domain' => 'ycombinator'
+        ],
+
+    'engadget' =>
+        [
+            'name' => 'Engadget',
+            'domain' => 'engadget'
+        ],
+
+    'betalist' =>
+        [
+            'name' => 'Beta List',
+            'domain' => 'betalist'
+        ],
+
+    'huffingtonpost' =>
+        [
+            'name' => 'The Huffington Post',
+            'domain' => 'huffingtonpost'
+        ]
 ];
