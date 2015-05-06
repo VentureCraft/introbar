@@ -46,3 +46,38 @@ $transition-timing-function: cubic-bezier(.55,0,.1,1);
 body {
   -webkit-font-smoothing: $font-smoothing;
 }
+
+#introbar {
+
+    padding: rem-calc(40 0);
+    background-color: $primary-color;
+
+    p {
+        margin: 0;
+    }
+
+}
+
+#header {
+
+    padding: rem-calc(40 0);
+
+    .logo {
+
+        margin: 0 auto;
+        display: block;
+        width: 200px;
+        height: 40px;
+    }
+
+}
+
+#footer {
+    padding: rem-calc(40 0);
+
+    p {
+        margin: 0;
+    }
+}
+
+
