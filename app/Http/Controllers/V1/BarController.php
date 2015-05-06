@@ -24,6 +24,7 @@ class BarController extends Controller {
 
         try {
             $html = view('v1.templates.' . $referrer)
+                ->withWhitelabel($site->subscribed())
                 ->withReferrer($site->referrers[0])
                 ->withSticky(false);
             $response = Response::make($html);
