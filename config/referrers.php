@@ -1,52 +1,10 @@
 <?php
 
 return [
-    'techcrunch' =>
+    'betalist' =>
         [
-            'name' => 'TechCrunch',
-            'domain' => 'techcrunch'
-        ],
-
-    'mashable' =>
-        [
-            'name' => 'Mashable',
-            'domain' => 'mashable'
-        ],
-
-    'producthunt' =>
-        [
-            'name' => 'ProductHunt',
-            'domain' => 'producthunt'
-        ],
-
-    'verge' =>
-        [
-            'name' => 'The Verge',
-            'domain' => 'verge'
-        ],
-
-    'thenextweb' =>
-        [
-            'name' => 'The Next Web',
-            'domain' => 'thenextweb'
-        ],
-
-    'nytimes' =>
-        [
-            'name' => 'New York Times',
-            'domain' => 'nytimes'
-        ],
-
-    'reddit' =>
-        [
-            'name' => 'Reddit',
-            'domain' => 'reddit'
-        ],
-
-    'hackernews' =>
-        [
-            'name' => 'Hacker News',
-            'domain' => 'ycombinator'
+            'name' => 'Beta List',
+            'domain' => 'betalist'
         ],
 
     'engadget' =>
@@ -55,15 +13,58 @@ return [
             'domain' => 'engadget'
         ],
 
-    'betalist' =>
+    'hackernews' =>
         [
-            'name' => 'Beta List',
-            'domain' => 'betalist'
+            'name' => 'Hacker News',
+            'domain' => 'ycombinator'
         ],
 
     'huffingtonpost' =>
         [
             'name' => 'The Huffington Post',
             'domain' => 'huffingtonpost'
+        ],
+
+    'mashable' =>
+        [
+            'name' => 'Mashable',
+            'domain' => 'mashable'
+        ],
+
+    'nytimes' =>
+        [
+            'name' => 'New York Times',
+            'domain' => 'nytimes'
+        ],
+
+    'producthunt' =>
+        [
+            'name' => 'ProductHunt',
+            'domain' => 'producthunt'
+        ],
+
+    'reddit' =>
+        [
+            'name' => 'Reddit',
+            'domain' => 'reddit'
+        ],
+
+    'techcrunch' =>
+        [
+            'name' => 'TechCrunch',
+            'domain' => 'techcrunch'
+        ],
+
+    'thenextweb' =>
+        [
+            'name' => 'The Next Web',
+            'domain' => 'thenextweb'
+        ],
+
+    'verge' =>
+        [
+            'name' => 'The Verge',
+            'domain' => 'verge'
         ]
+
 ];

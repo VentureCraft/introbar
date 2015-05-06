@@ -4,6 +4,8 @@
     <link href="{{ asset('css/vendor/spectrum.css') }}" rel="stylesheet">
 @stop
 
+@section('title', 'Edit ' . ($referrer->custom?'custom':config('referrers.' . $referrer->type . '.name')) . ' intro bar')
+
 @section('content')
     <div class="row">
         <div class="columns">
@@ -29,6 +31,26 @@
                             <small class="error">{{ $errors->first('domain') }}</small>
                         @endif
                     </div>
+                @endif
+
+                <div>
+                    <label for="header" class="{{ $errors->has('header')?'error':'' }}">Header
+                        {!! Form::text('header', null, ['placeholder' => 'e.g., Welcome from xyw.com!']) !!}
+                    </label>
+                    @if($errors->has('header'))
+                        <small class="error">{{ $errors->first('header') }}</small>
+                    @endif
+                </div>
+                <div>
+                    <label for="message" class="{{ $errors->has('message')?'error':'' }}">Message (optional)
+                        {!! Form::text('message', null, ['placeholder' => 'e.g., Use coupon code 1234 for mega discounts :)']) !!}
+                    </label>
+                    @if($errors->has('message'))
+                        <small class="error">{{ $errors->first('message') }}</small>
+                    @endif
+                </div>
+
+                @if($referrer->custom)
                     <div>
                         <div class="row">
                             <div class="columns small-6 medium-3">
@@ -50,22 +72,6 @@
                         </div>
                     </div>
                 @endif
-                <div>
-                    <label for="header" class="{{ $errors->has('header')?'error':'' }}">Header
-                        {!! Form::textarea('header', null, ['placeholder' => 'e.g., Welcome from xyw.com!']) !!}
-                    </label>
-                    @if($errors->has('header'))
-                        <small class="error">{{ $errors->first('header') }}</small>
-                    @endif
-                </div>
-                <div>
-                    <label for="message" class="{{ $errors->has('message')?'error':'' }}">Header
-                        {!! Form::textarea('message', null, ['placeholder' => 'e.g., Use coupon code 1234 for mega discounts :)']) !!}
-                    </label>
-                    @if($errors->has('message'))
-                        <small class="error">{{ $errors->first('message') }}</small>
-                    @endif
-                </div>
 
                 <div>
                     {!! Form::submit('Save', ['class' => 'small radius success button']) !!}

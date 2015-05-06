@@ -1,5 +1,7 @@
 @extends('frontend')
 
+@section('title', 'Dashboard')
+
 @section('content')
     <div class="row">
         <div class="columns">
@@ -55,10 +57,12 @@
             <div>
                 <h3>Add a new intro bar for...</h3>
 
-                <a class="small radius button info" href="{{ route('referrer.create', [$site->uid, 'custom']) }}">Custom</a>
-                @foreach(config('referrers') as $referrer_type => $referrer_info)
-                    <a class="small radius button" href="{{ route('referrer.create', [$site->uid, $referrer_type]) }}">{{ $referrer_info['name'] }}</a>
-                @endforeach
+                <div class="text-center">
+                    <a class="small radius button info" href="{{ route('referrer.create', [$site->uid, 'custom']) }}">Custom</a>
+                    @foreach(config('referrers') as $referrer_type => $referrer_info)
+                        <a class="small radius button" href="{{ route('referrer.create', [$site->uid, $referrer_type]) }}">{{ $referrer_info['name'] }}</a>
+                    @endforeach
+                </div>
             </div>
 
             @if($site->subscribed() && !$site->onGracePeriod())
