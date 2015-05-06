@@ -158,5 +158,10 @@
 
     </section>
 
+    <hr/>
+    <div class="text-center">
+        <h4>We're not ready for Product Hunt, so...</h4>
+        <img src="{{ asset('img/donthunt.png') }}" alt="Please don't hunt us yet" />
+    </div>
 
 @stop
