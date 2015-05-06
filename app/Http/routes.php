@@ -16,6 +16,13 @@ Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'site.index']);
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
 ]);
+
+Route::group([
+    'namespace' => 'V1',
+    'prefix' => 'v1'
+], function(){
+    Route::get('bar/{domain?}/{referrer?}', ['uses' => 'BarController@showBar']);
+});
