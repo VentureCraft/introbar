@@ -87,7 +87,7 @@
              <li><a href="?ref=techcrunch"><img src="{{ asset('img/sites/techcrunch.png') }}"></a></li>
              <li><a href="?ref=thenextweb"><img src="{{ asset('img/sites/thenextweb.png') }}"></a></li>
              <li><a href="?ref=mashable"><img src="{{ asset('img/sites/mashable.png') }}"></a></li>
-             <li><a href="?ref=theverge"><img src="{{ asset('img/sites/theverge.png') }}"></a></li>
+             <li><a href="?ref=verge"><img src="{{ asset('img/sites/theverge.png') }}"></a></li>
              <li><a href="?ref=engadget"><img src="{{ asset('img/sites/engadget.png') }}"></a></li>
              <li><a href="?ref=nytimes"><img src="{{ asset('img/sites/nytimes.png') }}"></a></li>
              <li><a href="?ref=huffingtonpost"><img src="{{ asset('img/sites/huffingtonpost.png') }}"></a></li>

@@ -19,7 +19,7 @@ return [
             'domain' => 'producthunt'
         ],
 
-    'theverge' =>
+    'verge' =>
         [
             'name' => 'The Verge',
             'domain' => 'verge'
@@ -47,5 +47,23 @@ return [
         [
             'name' => 'Hacker News',
             'domain' => 'ycombinator'
+        ],
+
+    'engadget' =>
+        [
+            'name' => 'Engadget',
+            'domain' => 'engadget'
+        ],
+
+    'betalist' =>
+        [
+            'name' => 'Beta List',
+            'domain' => 'betalist'
+        ],
+
+    'huffingtonpost' =>
+        [
+            'name' => 'The Huffington Post',
+            'domain' => 'huffingtonpost'
         ]
 ];

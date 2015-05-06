@@ -3,7 +3,8 @@
 @section('style')
     <style>
         #the-intro-bar #ib-content {
-            background-color: #089E00;
+            background-color: #00ccd3;
+
         }
     </style>
 @stop
