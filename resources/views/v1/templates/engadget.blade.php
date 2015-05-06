@@ -6,11 +6,16 @@
             background-color: #444;
         }
 
-        #the-intro-bar #ib-content #ib-header,
-        #the-intro-bar #ib-content #ib-message
+        #the-intro-bar #ib-content #ib-header
          {
             color: #39c;
-            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+
         }
+
+        #the-intro-bar #ib-content #ib-message
+                 {
+                    color: #fff;
+
+                }
     </style>
 @stop
