@@ -1,1 +1,0 @@
-$().ready(function(){$(document).foundation({equalizer:{equalize_on_stack:!1}});$("input[type=color]").spectrum({preferredFormat:"hex",chooseText:"Select",showInitial:!0,clickoutFiresChange:!0,showInput:!0})});
