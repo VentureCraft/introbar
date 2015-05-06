@@ -38,6 +38,8 @@ class ClearCDN extends Command implements SelfHandling, ShouldBeQueued
         $cdn->purgeFile(
             'v1/bar/' . $this->site_uid . '/' . $this->site_domain . '.html'
         );
+
+        $this->job->delete();
     }
 
 }
