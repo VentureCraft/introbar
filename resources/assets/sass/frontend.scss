@@ -2,6 +2,11 @@
 
 @import "includes/settings";
 
+$form-spacing: rem-calc(20);
+$form-label-font-size: rem-calc(18);
+$input-font-size: rem-calc(18);
+$input-border-radius: 3;
+
 @import "bower_components/foundation/scss/foundation/components/grid";
 @import "bower_components/foundation/scss/foundation/components/accordion";
 @import "bower_components/foundation/scss/foundation/components/alert-boxes";
@@ -44,6 +49,8 @@
 
 $transition-duration: 0.4s;
 $transition-timing-function: cubic-bezier(.55,0,.1,1);
+
+
 
 body {
   -webkit-font-smoothing: $font-smoothing;

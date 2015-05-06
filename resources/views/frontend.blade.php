@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <title>@yield('title', '') - IntroBar.com</title>
+    <title>@yield('title', 'Welcome new users from a range of referrers with Intro Bars') - IntroBar.com</title>
     <meta name="description" content="@yield('description', '')">
 
     <meta property="og:url" content="{!! Request::url() !!}"/>
