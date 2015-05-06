@@ -1,9 +1,8 @@
 var IntroBar = IntroBar || {};
 
 IntroBar.Embed = function() {
-    IntroBar.base_url = window._intro_bar.base_url || 'http://introbar.com';
+    IntroBar.base_url = window._intro_bar.base_url || 'http://cdn.introbar.com';
     IntroBar.account_id = window._intro_bar.account_id || null;
-    //IntroBar.base_url = 'http://introbar.dev:8000';
 
     var getDomain = function(){
         var url = document.location.href;
