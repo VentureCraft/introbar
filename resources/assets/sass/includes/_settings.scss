@@ -347,7 +347,7 @@ $h1-font-size: rem-calc(38);
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-alert-classes: $include-html-classes;
+$include-html-alert-classes: $include-html-classes;
 
 // We use this to control alert padding.
 // $alert-padding-top: rem-calc(14);
@@ -365,7 +365,7 @@ $h1-font-size: rem-calc(38);
 // $alert-function-factor: -14%;
 
 // We use these to control border styles.
-// $alert-border-style: solid;
+$alert-border-style: none;
 // $alert-border-width: 1px;
 // $alert-border-color: scale-color($primary-color, $lightness: $alert-function-factor);
 // $alert-bottom-margin: rem-calc(20);
