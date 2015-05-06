@@ -1,10 +1,11 @@
 <?php
 
 return [
-    'techcrunch' =>
+
+    'hackernews' =>
         [
-            'name' => 'TechCrunch',
-            'domain' => 'techcrunch'
+            'name' => 'Hacker News',
+            'domain' => 'ycombinator'
         ],
 
     'mashable' =>
@@ -13,10 +14,22 @@ return [
             'domain' => 'mashable'
         ],
 
+    'nytimes' =>
+        [
+            'name' => 'New York Times',
+            'domain' => 'nytimes'
+        ],
+
     'producthunt' =>
         [
             'name' => 'ProductHunt',
             'domain' => 'producthunt'
+        ],
+
+    'reddit' =>
+        [
+            'name' => 'Reddit',
+            'domain' => 'reddit'
         ],
 
     'theverge' =>
@@ -31,21 +44,10 @@ return [
             'domain' => 'thenextweb'
         ],
 
-    'nytimes' =>
+    'techcrunch' =>
         [
-            'name' => 'New York Times',
-            'domain' => 'nytimes'
+            'name' => 'TechCrunch',
+            'domain' => 'techcrunch'
         ],
 
-    'reddit' =>
-        [
-            'name' => 'Reddit',
-            'domain' => 'reddit'
-        ],
-
-    'hackernews' =>
-        [
-            'name' => 'Hacker News',
-            'domain' => 'ycombinator'
-        ]
 ];

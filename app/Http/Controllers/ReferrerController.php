@@ -40,6 +40,7 @@ class ReferrerController extends Controller
 
         return view('manage.referrer.create')
             ->withCustom($is_custom)
+            ->withType($referrer_type)
             ->withDefaults($referrer_defaults);
     }
 
