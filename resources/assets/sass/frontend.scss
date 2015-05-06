@@ -74,7 +74,7 @@ body {
 #intro {
 
   border-bottom: 1px solid scale_color($secondary-color, $lightness: 80%);
-  padding: rem-calc(40 0);
+  padding: rem-calc(60 0 80 0);
 
   h1 {
     margin-bottom: rem-calc(60);
@@ -85,16 +85,45 @@ body {
 #example {
 
     padding: rem-calc(40 0 0 0);
+  background-color: $primary-color;
+
+
+
+  .example-image {
+
+  }
+
+    h4 {
+      margin-top: rem-calc(40);
+      font-size: rem-calc(22);
+      color: $white;
+      margin-bottom: rem-calc(20);
+    }
 
 }
 
 #how-it-works {
 
-  padding: rem-calc(40 0);
-  background-color: $primary-color;
+  padding: rem-calc(80 0);
+  border-bottom: 1px solid scale_color($secondary-color, $lightness: 80%);
 
   h3 {
-    color: $white;
+    color: $primary-color;
+  }
+
+  p {
+    color: $secondary-color;
+  }
+
+  .sites {
+
+    margin-top: rem-calc(60);
+
+    .site {
+
+
+    }
+
   }
 
 }

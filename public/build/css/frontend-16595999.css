@@ -5755,18 +5755,28 @@ body {
 
 #intro {
   border-bottom: 1px solid #dbe3e6;
-  padding: 2.5rem 0; }
+  padding: 3.75rem 0 5rem 0; }
   #intro h1 {
     margin-bottom: 3.75rem; }
 
 #example {
-  padding: 2.5rem 0 0 0; }
+  padding: 2.5rem 0 0 0;
+  background-color: #ff8a65; }
+  #example h4 {
+    margin-top: 2.5rem;
+    font-size: 1.375rem;
+    color: #FFFFFF;
+    margin-bottom: 1.25rem; }
 
 #how-it-works {
-  padding: 2.5rem 0;
-  background-color: #ff8a65; }
+  padding: 5rem 0;
+  border-bottom: 1px solid #dbe3e6; }
   #how-it-works h3 {
-    color: #FFFFFF; }
+    color: #ff8a65; }
+  #how-it-works p {
+    color: #546e7a; }
+  #how-it-works .sites {
+    margin-top: 3.75rem; }
 
 #pricing {
   padding: 5rem 0; }
