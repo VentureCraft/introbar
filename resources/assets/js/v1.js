@@ -90,12 +90,12 @@ IntroBar.Embed = function() {
             return;
         }
         var referrer = getReferrer();
-        if (referrer === false) {
+        if (referrer === false || referrer === '' || referrer === null) {
             return;
         }
         var domain = getDomain();
         if (domain === referrer) {
-
+            return;
         }
         loadIntroBar(domain, referrer);
     };
