@@ -3,8 +3,20 @@
 @section('style')
     <style>
         #the-intro-bar #ib-content {
-            background-color: #00ccd3;
+            background-image: radial-gradient(circle at 50% 50%, #00ccd3, #00c7c5);
 
         }
+
+        #the-intro-bar #ib-content #ib-header
+                         {
+                            color: #fff;
+
+                        }
+
+                        #the-intro-bar #ib-content #ib-message {
+                            color: #00797a;
+
+                            font-weight: normal;
+                        }
     </style>
 @stop
