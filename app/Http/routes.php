@@ -13,8 +13,6 @@
 
 Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'site.index']);
 
-
-
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

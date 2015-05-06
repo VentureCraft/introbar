@@ -2,8 +2,8 @@
 
 @section('style')
     <style>
-#the-intro-bar #ib-content {
-    background-color: green;
-}
+        #the-intro-bar #ib-content {
+            background-color: green;
+        }
     </style>
 @stop

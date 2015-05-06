@@ -69,5 +69,25 @@ var _elev = window._elev || {};(function() {var i,e;i=document.createElement("sc
 _elev.account_id = '5549f860cc906';
 </script>
 
+<script>
+    @if(App::environment('local'))
+    var _intro_bar = window._intro_bar || {};(
+        function() {
+            var i,e;
+            i=document.createElement("script"),
+                    i.type='text/javascript';
+            i.async=1,
+                    i.src="http://introbar.dev:8000/js/v1.js",
+                    e=document.getElementsByTagName("script")[0],
+                    e.parentNode.insertBefore(i,e);
+        })();
+    _intro_bar.base_url = 'http://introbar.dev:8000';
+    @else
+        var _intro_bar = window._intro_bar || {};(
+        function() {var i,e;i=document.createElement("script"), i.type='text/javascript';i.async=1, i.src="http://cdn.introbar.com/js/v1.js", e=document.getElementsByTagName("script")[0], e.parentNode.insertBefore(i,e);})();
+    @endif
+    _intro_bar.account_id = '5549f860cc906';
+</script>
+
 </body>
 </html>
