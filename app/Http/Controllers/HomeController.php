@@ -34,6 +34,7 @@ class HomeController extends Controller
     public function index()
     {
         $site = Auth::user()->sites->first();
+
         return view('home')
             ->withSite($site);
     }

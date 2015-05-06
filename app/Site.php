@@ -22,4 +22,9 @@ class Site extends Model implements BillableContract
     {
         return $this->hasMany('App\Referrer');
     }
+
+    public function getAtLimitAttribute()
+    {
+        return !$this->subscribed() && $this->referrers->count();
+    }
 }

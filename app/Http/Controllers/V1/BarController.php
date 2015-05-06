@@ -12,7 +12,13 @@ class BarController extends Controller {
             $query->where('domain', 'like', '%'.$referrer.'%');
         }])->whereUid($uid)->first();
 
-        if (!$site->subscribed() || !$site->referrers->count()) {
+        if (!$site->subscribed() && !$site->referrers->count() > 0) {
+            // check they don't have more referrers than they should
+            return $this->returnNothing();
+        }
+
+        if (!$site->subscribed() && !array_key_exists($referrer, config('referrers'))) {
+            // check they don't have custom if they aren't paying
             return $this->returnNothing();
         }
 

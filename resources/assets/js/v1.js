@@ -47,7 +47,9 @@ IntroBar.Embed = function() {
                     document.getElementById("the-intro-bar").innerHTML = xmlhttp.responseText;
                     var thebar = document.getElementById("the-intro-bar");
                     var closebtn = document.getElementById("ib-close");
-
+                    if (closebtn === null) {
+                        return;
+                    }
                     addEventListener(closebtn, 'click', function(){
                         closebtn.style.display = 'none';
                         thebar.style.height = getComputedStyle(thebar).height;

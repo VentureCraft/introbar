@@ -22,8 +22,8 @@ class ReferrerController extends Controller
     public function create($site_uid, $referrer_type = 'custom')
     {
         $is_custom = $referrer_type === 'custom';
+        $site = Site::whereUid($site_uid)->first();
         if (!$is_custom) {
-            $site = Site::whereUid($site_uid)->first();
             $referrer = Referrer::whereSiteId($site->id)
                 ->whereType($referrer_type)
                 ->first();
@@ -33,6 +33,11 @@ class ReferrerController extends Controller
         }
 
         $referrer_defaults = config('referrers.' . $referrer_type);
+        if ($site->at_limit) {
+            Notification::info('Sorry, you need to <a href="#" data-reveal-id="upgrade-modal">move to a paid</a> plan to add more sources.');
+            return redirect()->route('dashboard');
+        }
+
         if (!$is_custom && !$referrer_defaults) {
             Notification::warning('Sorry, that referrer type is not available yet');
             return redirect()->route('dashboard');

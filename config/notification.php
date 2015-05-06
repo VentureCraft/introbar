@@ -37,7 +37,7 @@ return array(
     */
     'default_format'                        => array(
 
-        'default'               => '<div class="alert-box alert-:type">:message</div>',
+        'default'               => '<div class="radius alert-box :type">:message</div>',
 
     ),
 
@@ -64,7 +64,7 @@ return array(
     'default_formats'                       => array(
 
         'default'               => array(
-            'error'             => '<div class="alert-box alert">:message</div>'
+            'error'             => '<div class="radius alert-box alert">:message</div>'
         ),
 
     ),
