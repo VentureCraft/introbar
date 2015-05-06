@@ -4,48 +4,48 @@ return [
     'techcrunch' =>
         [
             'name' => 'TechCrunch',
-            'domain' => 'techcrunch.com'
+            'domain' => 'techcrunch'
         ],
 
     'mashable' =>
         [
             'name' => 'Mashable',
-            'domain' => 'mashable.com'
+            'domain' => 'mashable'
         ],
 
     'producthunt' =>
         [
             'name' => 'ProductHunt',
-            'domain' => 'producthunt.com'
+            'domain' => 'producthunt'
         ],
 
     'theverge' =>
         [
             'name' => 'The Verge',
-            'domain' => 'verge.com'
+            'domain' => 'verge'
         ],
 
     'thenextweb' =>
         [
             'name' => 'The Next Web',
-            'domain' => 'thenextweb.com'
+            'domain' => 'thenextweb'
         ],
 
     'nytimes' =>
         [
             'name' => 'New York Times',
-            'domain' => 'nytimes.com'
+            'domain' => 'nytimes'
         ],
 
     'reddit' =>
         [
             'name' => 'Reddit',
-            'domain' => 'reddit.com'
+            'domain' => 'reddit'
         ],
 
     'hackernews' =>
         [
             'name' => 'Hacker News',
-            'domain' => 'news.ycombinator.com'
+            'domain' => 'ycombinator'
         ]
 ];

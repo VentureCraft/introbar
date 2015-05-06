@@ -147,7 +147,9 @@ return [
 
         'Illuminate\Html\HtmlServiceProvider',
         'Laravel\Cashier\CashierServiceProvider',
-        'Krucas\Notification\NotificationServiceProvider'
+        'Krucas\Notification\NotificationServiceProvider',
+
+        'App\Providers\CDNServiceProvider'
     ],
 
     /*

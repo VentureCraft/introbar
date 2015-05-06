@@ -1,11 +1,14 @@
 <?php namespace App\Http\Controllers;
 
+use App\Commands\ClearCDN;
+use CDN;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Referrer;
 use App\Site;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Queue;
 use Krucas\Notification\Facades\Notification;
 
 class ReferrerController extends Controller
@@ -89,7 +92,10 @@ class ReferrerController extends Controller
      */
     public function update(Requests\EditReferrerRequest $request, $referrer_id)
     {
+        $referrer = Referrer::find($referrer_id);
         Referrer::find($referrer_id)->update($request->all());
+
+        Queue::push(new ClearCDN($referrer->site->uid, $referrer->domain));
 
         Notification::success('Intro bar updated, it may take some time for the cache to clear');
         return redirect()->route('dashboard');
