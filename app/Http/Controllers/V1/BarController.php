@@ -29,6 +29,7 @@ class BarController extends Controller {
                 ->withSticky(false);
             $response = Response::make($html);
             $response = $this->allowOriginHeaders($response);
+            $response->header('Content-Length', strlen($response->getContent()));
             return $response;
         } catch (\Exception $e) {
             return $this->returnNothing();
@@ -39,7 +40,7 @@ class BarController extends Controller {
     {
         $response = Response::make('');
         $response = $this->allowOriginHeaders($response);
-
+        $response->header('Content-Length', strlen($response->getContent()));
         return $response;
     }
 

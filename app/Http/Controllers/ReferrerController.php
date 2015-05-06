@@ -68,6 +68,9 @@ class ReferrerController extends Controller
 
         Referrer::create($input);
         Notification::success('New intro bar added, nice work :)');
+
+        Queue::push(new ClearCDN($site_uid, $input['domain']));
+
         return redirect()->route('dashboard');
     }
 
