@@ -13,38 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+//        Model::unguard();
 
-        $referrers = [
-            [
-                'name' => 'TechCrunch',
-                'domain' => 'techcrunch.com'
-            ],
-            [
-                'name' => 'Mashable',
-                'domain' => 'mashable.com'
-            ],
-            [
-                'name' => 'ProductHunt',
-                'domain' => 'producthunt.com'
-            ],
-            [
-                'name' => 'The Verge',
-                'domain' => 'verge.com'
-            ],
-            [
-                'name' => 'The Next Web',
-                'domain' => 'thenextweb.com'
-            ],
-            [
-                'name' => 'GigaOM',
-                'domain' => 'gigaom.com'
-            ]
-        ];
-
-        foreach ($referrers as $referrer) {
-            \App\Referrer::create($referrer);
-        }
     }
-
 }

@@ -145,6 +145,7 @@ return [
         'App\Providers\EventServiceProvider',
         'App\Providers\RouteServiceProvider',
 
+        'Illuminate\Html\HtmlServiceProvider',
         'Laravel\Cashier\CashierServiceProvider',
         'Krucas\Notification\NotificationServiceProvider'
     ],
@@ -195,7 +196,9 @@ return [
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View' => 'Illuminate\Support\Facades\View',
 
-        'Notification' => 'Krucas\Notification\Facades\Notification'
+        'Notification' => 'Krucas\Notification\Facades\Notification',
+        'Html' => 'Illuminate\Html\HtmlFacade',
+        'Form' => 'Illuminate\Html\FormFacade',
 
     ],
 

@@ -13,7 +13,13 @@ class Site extends Model implements BillableContract
 
     public $fillable = [
         'user_id',
+        'uid',
         'name',
         'url'
     ];
+
+    public function referrers()
+    {
+        return $this->hasMany('App\Referrer');
+    }
 }

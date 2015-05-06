@@ -13,7 +13,7 @@
 
 Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'site.index']);
 
-Route::get('home', 'HomeController@index');
+
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
@@ -24,5 +24,20 @@ Route::group([
     'namespace' => 'V1',
     'prefix' => 'v1'
 ], function(){
-    Route::get('bar/{domain?}/{referrer?}', ['uses' => 'BarController@showBar']);
+    Route::get('bar/{domain?}/{referrer?}.html', ['uses' => 'BarController@showBar']);
+});
+
+
+Route::group([
+    'middleware' => 'auth'
+], function(){
+    Route::get('home', ['uses' => 'HomeController@index', 'as' => 'dashboard']);
+
+    Route::get('site/{site_uid}/add_referrer/custom', ['uses' => 'ReferrerController@create', 'as' => 'referrer.create']);
+    Route::post('site/{site_uid}/add_referrer/custom', ['uses' => 'ReferrerController@store', 'as' => 'referrer.store']);
+    Route::get('site/{site_uid}/add_referrer/{referrer_type}', ['uses' => 'ReferrerController@create', 'as' => 'referrer.create']);
+    Route::post('site/{site_uid}/add_referrer/{referrer_type}', ['uses' => 'ReferrerController@store', 'as' => 'referrer.store']);
+    Route::get('referrer/{referrer_id}/edit', ['uses' => 'ReferrerController@edit', 'as' => 'referrer.edit']);
+    Route::post('referrer/{referrer_id}/edit', ['uses' => 'ReferrerController@update', 'as' => 'referrer.update']);
+    Route::delete('referrer/{referrer_id}', ['uses' => 'ReferrerController@destroy', 'as' => 'referrer.destroy']);
 });

@@ -77,7 +77,8 @@ class AuthController extends Controller
         ]);
         $site = Site::create([
             'url' => $request->get('url'),
-            'user_id' => $user->id
+            'user_id' => $user->id,
+            'uid' => uniqid()
         ]);
 
         $this->auth->loginUsingId($user->id);
