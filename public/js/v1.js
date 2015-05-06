@@ -1,8 +1,9 @@
 var IntroBar = IntroBar || {};
 
 IntroBar.Embed = function() {
-    //IntroBar.base_url = 'http://introbar.com/';
-    IntroBar.base_url = 'http://introbar.dev:8000';
+    IntroBar.base_url = window._intro_bar.base_url || 'http://introbar.com';
+    IntroBar.account_id = window._intro_bar.account_id || null;
+    //IntroBar.base_url = 'http://introbar.dev:8000';
 
     var getDomain = function(){
         var url = document.location.href;
@@ -10,8 +11,19 @@ IntroBar.Embed = function() {
         return domain;
     };
 
-    var getReferrerDomain = function(){
-        if (document.referrer) {
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    var getReferrer = function(){
+        var ref = getParameterByName('ref');
+        if (typeof ref != 'undefined') {
+            return ref;
+        }
+        else if (document.referrer) {
             var url = document.referrer;
             ref = url.match(/:\/\/(.[^/]+)/)[1];
             return ref;
@@ -33,12 +45,13 @@ IntroBar.Embed = function() {
             if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
                 if(xmlhttp.status == 200){
                     document.getElementById("the-intro-bar").innerHTML = xmlhttp.responseText;
-                }
-                else if(xmlhttp.status == 400) {
-                    alert('There was an error 400')
-                }
-                else {
-                    alert('something else other than 200 was returned')
+                    var thebar = document.getElementById("the-intro-bar")
+
+                    addEventListener(thebar, 'click', function(){
+                        thebar.style.height = getComputedStyle(thebar).height;
+                        thebar.offsetHeight;
+                        thebar.style.height = '0px';
+                    });
                 }
             }
         };
@@ -47,6 +60,17 @@ IntroBar.Embed = function() {
         xmlhttp.send();
     }
 
+    var addEventListener = function (element, event, callback, useCapture) {
+        useCapture = typeof useCapture !== 'undefined' ? useCapture : false;
+        if (element.addEventListener) {
+            element.addEventListener(event, callback, useCapture);
+        }
+        else {
+            if (event == "click") event = "onclick";
+            if (event == "mouseup") event = "onmouseup";
+            element.attachEvent(event, callback);
+        }
+    };
 
     var loadIntroBar = function(domain, referrer){
         //loadStyle(IntroBar.base_url + 'css/v1.css');
@@ -55,11 +79,14 @@ IntroBar.Embed = function() {
         //var e = document.body;
         document.body.children[0].parentNode.insertBefore(html, document.body.children[0]);
         //e.prependChild(html);
-        injectBar(IntroBar.base_url + '/v1/bar/' + domain + '/' + referrer);
+        injectBar(IntroBar.base_url + '/v1/bar/' + IntroBar.account_id + '/' + referrer + '.html');
     };
 
     var init = function(){
-        var referrer = getReferrerDomain();
+        if (typeof IntroBar.account_id === 'undefined') {
+            return;
+        }
+        var referrer = getReferrer();
         if (referrer === false) {
             return;
         }

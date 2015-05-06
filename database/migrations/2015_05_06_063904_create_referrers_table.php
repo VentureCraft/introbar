@@ -15,26 +15,18 @@ class CreateReferrersTable extends Migration
     {
         Schema::create('referrers', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('site_id')->unsigned();
+
             $table->string('name');
             $table->string('domain');
-            $table->timestamps();
-        });
-
-
-        Schema::create('referrers_sites', function(Blueprint $table){
-            $table->increments('id');
-
-            $table->integer('referrer_id')->unsigned();
-            $table->integer('site_id')->unsigned();
+            $table->string('type');
 
             $table->text('header')->nullable();
             $table->text('message')->nullable();
+            $table->string('background_color')->default('#000000');
+            $table->string('text_color')->default('#FFFFFF');
 
             $table->timestamps();
-
-            $table->foreign('referrer_id')
-                ->references('id')->on('referrers')
-                ->onDelete('cascade');
 
             $table->foreign('site_id')
                 ->references('id')->on('sites')
@@ -50,7 +42,6 @@ class CreateReferrersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('referrers_sites');
         Schema::drop('referrers');
     }
 
