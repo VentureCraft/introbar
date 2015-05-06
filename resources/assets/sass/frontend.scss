@@ -40,6 +40,8 @@
 @import "bower_components/foundation/scss/foundation/components/offcanvas";
 @import "bower_components/foundation/scss/foundation/components/visibility";
 
+@import "includes/spectrum";
+
 $transition-duration: 0.4s;
 $transition-timing-function: cubic-bezier(.55,0,.1,1);
 
@@ -171,3 +173,19 @@ body {
 }
 
 
+.referrer {
+  border: 1px solid #CCC;
+  border-radius: rem-calc(3);
+  margin: rem-calc(5 0);
+  padding: rem-calc(10);
+}
+
+.reveal-modal pre {
+  width: 100%;
+  overflow-x: scroll;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #333;
+  color: #CCC;
+  border: 1px solid #CCC;
+}

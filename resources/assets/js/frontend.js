@@ -12,5 +12,12 @@ $().ready(function () {
     var easingSwiftOut = [.55, 0, .1, 1];
     var easingSwiftIn = [.9, 0, .45, 1];
 
+    $('input[type=color]').spectrum({
+        preferredFormat: "hex",
+        chooseText: "Select",
+        showInitial: true,
+        clickoutFiresChange: true,
+        showInput: true
+    });
 
 });
