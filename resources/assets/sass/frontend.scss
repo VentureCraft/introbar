@@ -64,19 +64,80 @@ body {
 
     .logo {
 
-        margin: 0 auto;
         display: block;
-        width: 200px;
-        height: 40px;
+        width: 100px;
+        height: 24px;
     }
 
 }
 
+#intro {
+
+  border-bottom: 1px solid scale_color($secondary-color, $lightness: 80%);
+  padding: rem-calc(40 0);
+
+  h1 {
+    margin-bottom: rem-calc(60);
+  }
+
+}
+
+#example {
+
+    padding: rem-calc(40 0 0 0);
+
+}
+
+#how-it-works {
+
+  padding: rem-calc(40 0);
+  background-color: $primary-color;
+
+  h3 {
+    color: $white;
+  }
+
+}
+
+#pricing {
+
+  padding: rem-calc(80 0);
+
+  .price {
+
+    background-color: $primary-color;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  text-align: center;
+    margin: 0 auto;
+    padding: rem-calc(45 0 0 0);
+
+    .amount {
+      color: $white;
+      font-size: rem-calc(48);
+      font-weight: $font-weight-light;
+      line-height: rem-calc(42);
+    }
+
+    .extra {
+
+      color: $white;
+      font-size: rem-calc(12);
+    }
+
+  }
+
+}
+
 #footer {
+    border-top: 1px solid scale_color($secondary-color, $lightness: 80%);
     padding: rem-calc(40 0);
 
     p {
         margin: 0;
+        font-size: rem-calc(14);
+        color: scale_color($secondary-color, $lightness: 40%);
     }
 }
 

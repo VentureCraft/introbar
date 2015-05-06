@@ -15,7 +15,7 @@
 
     <link rel="home" href="{!! route('site.index') !!}"/>
 
-    <link href="{!! elixir('css/frontend.css') !!}" rel="stylesheet">
+    <link href="{!! asset('css/frontend.css') !!}" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -27,22 +27,22 @@
 
     @yield('head')
 
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Roboto:400,300,700:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); </script>
+
 </head>
 <body>
-
-<section id="introbar">
-
-    <div class="row">
-
-        <div class="columns medium-12 text-center">
-
-            <p>This is your intro bar</p>
-
-        </div>
-
-    </div>
-
-</section>
 
 @include('partials.header')
 
@@ -52,6 +52,17 @@
 
 <!-- Scripts -->
 <script src="{!! elixir('js/frontend.js') !!}"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45780115-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>
