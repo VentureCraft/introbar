@@ -19,7 +19,7 @@ class CreateReferrerRequest extends Request
         if (!is_null($type) && !config('referrers.' . $type)) {
             return false;
         }
-        if (!$site || $site->user_id != Auth::user()->id || $site->at_limit) {
+        if (!$site || $site->user_id != Auth::user()->id) {
             return false;
         }
         return true;

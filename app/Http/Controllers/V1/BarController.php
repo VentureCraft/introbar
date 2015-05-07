@@ -11,10 +11,10 @@ class BarController extends Controller {
 
         $site = Site::with(['referrers'])->whereUid($uid)->first();
 
-        if (!$site->subscribed() && $site->referrers->count() !== 1) {
+        // if (!$site->subscribed() && $site->referrers->count() !== 1) {
             // check they don't have more referrers than they should
-            return $this->returnNothing();
-        }
+            // return $this->returnNothing();
+        // }
 
         $referrer = $site->referrers->filter(function($ref) use ($referrer){
             return strpos($ref, $referrer) !== false;
@@ -26,16 +26,16 @@ class BarController extends Controller {
         }
 
 
-        if (!$site->subscribed() && !array_key_exists($referrer, config('referrers'))) {
+        // if (!$site->subscribed() && !array_key_exists($referrer, config('referrers'))) {
             // check they don't have custom if they aren't paying
-            return $this->returnNothing();
-        }
+            // return $this->returnNothing();
+        // }
 
         $template = $referrer->custom?'custom':$referrer->type;
 
         try {
             $html = view('v1.templates.' . $template)
-                ->withWhitelabel($site->subscribed())
+                ->withWhitelabel(false)
                 ->withReferrer($referrer)
                 ->withSticky(false);
             $response = Response::make($html);

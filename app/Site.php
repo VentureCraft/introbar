@@ -25,6 +25,7 @@ class Site extends Model implements BillableContract
 
     public function getAtLimitAttribute()
     {
-        return !$this->subscribed() && $this->referrers->count();
+        return false;
+        // return !$this->subscribed() && $this->referrers->count();
     }
 }

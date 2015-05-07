@@ -23,7 +23,7 @@
 
 
                     <div class="columns medium-12">
-                        <a class="button radius expand" href="auth/register">Get started for free</a>
+                        <a class="button radius expand" href="auth/register">And it's FREE! Register now</a>
                     </div>
 
                 </div>
@@ -50,7 +50,7 @@
 
 
                 <h4>Make the most of your traffic by giving your visitors custom intros and offers based on the
-                    referrer.</h4>
+                    where they came from.</h4>
 
                 <p><a class="button tiny secondary radius" href="{{ route('site.index') }}?ref=producthunt">See a
                         demo</a></p>
@@ -113,43 +113,15 @@
 
         <div class="row">
 
-            <div class="columns medium-4 text-center">
+            <div class="columns medium-12 text-center">
 
                 <div class="price">
 
                     <div class="amount">FREE</div>
-                    <div class="extra">for one bar</div>
 
                 </div>
 
                 <a class="button radius small" href="/auth/register">Get Started</a>
-
-            </div>
-
-
-            <div class="columns medium-4 text-center">
-
-                <div class="price">
-
-                    <div class="amount">$5/m</div>
-                    <div class="extra">unlimited bars</div>
-
-                </div>
-
-                <a class="button radius small" href="/auth/register">Get Started</a>
-
-            </div>
-
-
-            <div class="columns medium-4">
-
-                <h3>Simple Pricing</h3>
-
-                <ul>
-                    <li>Month-by-month</li>
-                    <li>No Contracts</li>
-                    <li>Super Simple Installation</li>
-                </ul>
 
             </div>
 

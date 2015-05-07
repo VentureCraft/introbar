@@ -5,6 +5,7 @@ use CDN;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App;
 use App\Referrer;
 use App\Site;
 use Illuminate\Http\Request;
@@ -33,10 +34,6 @@ class ReferrerController extends Controller
         }
 
         $referrer_defaults = config('referrers.' . $referrer_type);
-        if ($site->at_limit) {
-            Notification::info('Sorry, you need to <a href="#" data-reveal-id="upgrade-modal">move to a paid</a> plan to add more sources.');
-            return redirect()->route('dashboard');
-        }
 
         if (!$is_custom && !$referrer_defaults) {
             Notification::warning('Sorry, that referrer type is not available yet');
@@ -69,7 +66,9 @@ class ReferrerController extends Controller
         Referrer::create($input);
         Notification::success('New intro bar added, nice work :)');
 
-        Queue::push(new ClearCDN($site_uid, $input['domain']));
+        if (!App::environment('local')) {
+            Queue::push(new ClearCDN($site_uid, $input['domain']));
+        }
 
         return redirect()->route('dashboard');
     }
