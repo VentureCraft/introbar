@@ -32,6 +32,12 @@ Route::group([
         ->where('referrer', '(.*)');
 });
 
+Route::group([
+    'prefix' => 'twitter'
+], function(){
+    Route::get('auth/login', ['uses' => 'Auth\TwitterController@getLogin', 'as' => 'twitter.login']);
+    Route::get('auth/return', 'Auth\TwitterController@oauthReturn');
+});
 
 Route::group([
     'middleware' => 'auth'
@@ -39,6 +45,9 @@ Route::group([
     Route::get('home', ['uses' => 'DashboardController@index', 'as' => 'dashboard']);
     Route::post('site/{site_uid}/setupPayment', ['uses' => 'PaymentController@setupPayment', 'as' => 'site.setup_billing']);
     Route::delete('site/{site_uid}/cancelBilling', ['uses' => 'PaymentController@cancelBilling', 'as' => 'site.cancel_billing']);
+
+    Route::get('site/create', ['uses' => 'SiteController@create', 'as' => 'site.create']);
+    Route::post('site/create', ['uses' => 'SiteController@store', 'as' => 'site.store']);
 
     Route::get('site/{site_uid}/add_referrer/custom', ['uses' => 'ReferrerController@create', 'as' => 'referrer.create']);
     Route::post('site/{site_uid}/add_referrer/custom', ['uses' => 'ReferrerController@store', 'as' => 'referrer.store']);

@@ -149,7 +149,8 @@ return [
         'Laravel\Cashier\CashierServiceProvider',
         'Krucas\Notification\NotificationServiceProvider',
 
-        'App\Providers\CDNServiceProvider'
+        'App\Providers\CDNServiceProvider',
+        'Laravel\Socialite\SocialiteServiceProvider'
     ],
 
     /*
@@ -201,6 +202,7 @@ return [
         'Notification' => 'Krucas\Notification\Facades\Notification',
         'Html' => 'Illuminate\Html\HtmlFacade',
         'Form' => 'Illuminate\Html\FormFacade',
+        'Socialize' => 'Laravel\Socialite\Facades\Socialite',
 
     ],
 

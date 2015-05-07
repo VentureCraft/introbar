@@ -73,8 +73,7 @@
         <p class="lead">Add the following to directly before your &lt;/body&gt; tag.</p>
         <pre>
 &lt;script&gt;
-    var _intro_bar = window._intro_bar || {};(
-    function() {var i,e;i=document.createElement("script"), i.type='text/javascript';i.async=1, i.src="http://cdn.introbar.com/js/v1.js", e=document.getElementsByTagName("script")[0], e.parentNode.insertBefore(i,e);})();
+    var _intro_bar = window._intro_bar || {};(function() {var i,e;i=document.createElement("script"), i.type='text/javascript';i.async=1, i.src="http://cdn.introbar.com/js/v1.js", e=document.getElementsByTagName("script")[0], e.parentNode.insertBefore(i,e);})();
     _intro_bar.account_id = '{{ $site->uid }}';
 &lt;/script&gt;
 </pre>

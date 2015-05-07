@@ -8,6 +8,12 @@
 
         <div class="column medium-6 medium-centered">
 
+            <p class="text-center">
+                <a class="small round button" href="{{ route('twitter.login') }}">Login with twitter</a>
+            </p>
+
+            <p class="text-center">-or-</p>
+
             <h3>Register</h3>
 
             @if (count($errors) > 0)

@@ -43,5 +43,11 @@ return [
 
     'rollbar' => [
         'access_token' => env('ROLLBAR_ACCESS_TOKEN'),
-    ]
+    ],
+
+    'twitter' => [
+        'client_id' => 'V4McVVYmCZixLCb6xfS9MLktq',
+        'client_secret' => 'gOIO47kbilqFxxs6TZCXjVOfmrf4GqUakeLQ0rs04Uuz0nFkRw',
+        'redirect' => env('BASE_URL', 'http://introbar.com') . '/twitter/auth/return',
+    ],
 ];
