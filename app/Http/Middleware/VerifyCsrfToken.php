@@ -15,7 +15,7 @@ class VerifyCsrfToken extends BaseVerifier
      */
     public function handle($request, Closure $next)
     {
-        if ($request->url() == '/queue/receive')
+        if ($request->url() == url('/queue/receive'))
             return $next($request);
 
         return parent::handle($request, $next);
