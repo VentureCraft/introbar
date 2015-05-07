@@ -45,6 +45,9 @@ IntroBar.Embed = function() {
                 if(xmlhttp.status == 200){
                     document.getElementById("the-intro-bar").innerHTML = xmlhttp.responseText;
                     var thebar = document.getElementById("the-intro-bar");
+                    var maxheight = getComputedStyle(thebar).height;
+                    thebar.style.visibility = "visible";
+                    thebar.style.maxHeight = "0px";
                     var closebtn = document.getElementById("ib-close");
                     if (closebtn === null) {
                         return;
@@ -55,7 +58,9 @@ IntroBar.Embed = function() {
                         thebar.offsetHeight;
                         thebar.style.maxHeight = '0px';
                     });
-                    thebar.style.maxHeight = '500px';
+                    setTimeout(function(){
+                        thebar.style.maxHeight = maxheight;
+                    }, 1);
                 }
             }
         };
@@ -81,12 +86,14 @@ IntroBar.Embed = function() {
         var html = document.createElement("div");
         html.id = "the-intro-bar";
         //html.style.display = "none";
-        html.style.maxHeight = "0px";
+        //html.style.maxHeight = "0px";
+        html.style.visibility = "hidden";
         html.style.overflow = "hidden";
-        html.style.setProperty("transition", "height 1s linear, max-height 1s linear");
-        html.style.setProperty("-webkit-transition", "height 1s linear, max-height 1s linear");
+        html.style.setProperty("transition", "height 0.8s linear, max-height 0.8s linear");
+        html.style.setProperty("-webkit-transition", "height 0.8s linear, max-height 0.8s linear");
         html.style.setProperty("transition-timing-function", "cubic-bezier(.55,0,.1,1)");
         html.style.setProperty("-webkit-transition-timing-function", "cubic-bezier(.55,0,.1,1)");
+
         //var e = document.body;
         document.body.children[0].parentNode.insertBefore(html, document.body.children[0]);
         //e.prependChild(html);
