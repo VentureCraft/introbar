@@ -31,13 +31,12 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
-        if (!Config::get('app.debug') && $e->getStatusCode() != '404') {
+        if (true || !Config::get('app.debug') && $e->getStatusCode() != '404') {
 
             $conf = [
                 'access_token' => config('services.rollbar.access_token'),
                 'environment' => App::environment(),
-                'root' => app_path(),
-                'code_version' => HtmlBuilder::gitVersion()
+                'root' => app_path()
             ];
 
             if (Auth::check()) {
