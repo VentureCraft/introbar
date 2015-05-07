@@ -46,7 +46,9 @@ IntroBar.Embed = function() {
                     document.getElementById("the-intro-bar").innerHTML = xmlhttp.responseText;
                     setTimeout(function(){
                         var thebar = document.getElementById("the-intro-bar");
+                        thebar.offsetHeight;// force render
                         var maxheight = getComputedStyle(thebar).height;
+                        thebar.offsetHeight;// force render
                         thebar.style.visibility = "visible";
                         thebar.style.maxHeight = "0px";
                         thebar.style.position = "relative";
@@ -59,7 +61,6 @@ IntroBar.Embed = function() {
                             return;
                         }
                         addEventListener(closebtn, 'click', function(){
-                            //closebtn.style.display = 'none';
                             thebar.style.maxHeight = getComputedStyle(thebar).height;
                             thebar.offsetHeight;
                             thebar.style.maxHeight = '0px';
