@@ -19,7 +19,7 @@ IntroBar.Embed = function() {
 
     var getReferrer = function(){
         var ref = getParameterByName('ref');
-        if (ref === null) {
+        if (ref !== null && ref !== "") {
             return ref;
         }
         else if (document.referrer) {
