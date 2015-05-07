@@ -41,4 +41,7 @@ return [
         'secret' => env('STRIPE_API_SECRET'),
     ],
 
+    'rollbar' => [
+        'access_token' => env('ROLLBAR_ACCESS_TOKEN'),
+    ]
 ];
