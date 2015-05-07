@@ -131,8 +131,8 @@
 
                 <div class="price">
 
-                    <div class="amount">$5</div>
-                    <div class="extra">per month</div>
+                    <div class="amount">$5/m</div>
+                    <div class="extra">unlimited bars</div>
 
                 </div>
 
@@ -146,7 +146,6 @@
                 <h3>Simple Pricing</h3>
 
                 <ul>
-                    <li>Unlimited IntroBars</li>
                     <li>Month-by-month</li>
                     <li>No Contracts</li>
                     <li>Super Simple Installation</li>

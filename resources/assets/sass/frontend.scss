@@ -195,3 +195,15 @@ body {
   color: #CCC;
   border: 1px solid #CCC;
 }
+
+div#elevio-inline .powered-by,
+div#elevio-widget-container.open .powered-by {
+  background-color: #ff8a65 !important;
+  a {
+    color: #FFF !important;
+    &:hover {
+      color: #FFF !important;
+      text-decoration: underline;
+    }
+  }
+}

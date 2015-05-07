@@ -18,6 +18,9 @@ elixir(function(mix) {
         'frontend.scss'
     ]);
 
+    mix.scripts([
+        'v1.js'
+    ], 'public/js/v1.js');
 
     mix.scripts([
         '../../../bower_components/modernizr/modernizr.js',
@@ -29,9 +32,6 @@ elixir(function(mix) {
         'frontend.js'
     ], 'public/js/frontend.js');
 
-    mix.scripts([
-        'v1.js'
-    ], 'public/js/v1.js');
 
     mix.version([
         'public/css/frontend.css',

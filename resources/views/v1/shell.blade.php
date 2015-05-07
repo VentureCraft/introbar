@@ -15,11 +15,8 @@
 
     <style>
         #the-intro-bar {
-            overflow: hidden;
-            -webkit-transition: height .5s ease-in-out; /* Safari */
-            transition: height .5s ease-in-out;
-            transition-timing-function: cubic-bezier(.55,0,.1,1);
-            -webkit-transition-timing-function: cubic-bezier(.55,0,.1,1);
+            position: relative;
+            /*overflow: hidden;*/
         }
         #the-intro-bar #ib-content {
             z-index: 1000;

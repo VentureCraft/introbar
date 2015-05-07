@@ -50,11 +50,12 @@ IntroBar.Embed = function() {
                         return;
                     }
                     addEventListener(closebtn, 'click', function(){
-                        closebtn.style.display = 'none';
-                        thebar.style.height = getComputedStyle(thebar).height;
+                        //closebtn.style.display = 'none';
+                        thebar.style.maxHeight = getComputedStyle(thebar).height;
                         thebar.offsetHeight;
-                        thebar.style.height = '0px';
+                        thebar.style.maxHeight = '0px';
                     });
+                    thebar.style.maxHeight = '500px';
                 }
             }
         };
@@ -79,6 +80,13 @@ IntroBar.Embed = function() {
         //loadStyle(IntroBar.base_url + 'css/v1.css');
         var html = document.createElement("div");
         html.id = "the-intro-bar";
+        //html.style.display = "none";
+        html.style.maxHeight = "0px";
+        html.style.overflow = "hidden";
+        html.style.setProperty("transition", "height 1s linear, max-height 1s linear");
+        html.style.setProperty("-webkit-transition", "height 1s linear, max-height 1s linear");
+        html.style.setProperty("transition-timing-function", "cubic-bezier(.55,0,.1,1)");
+        html.style.setProperty("-webkit-transition-timing-function", "cubic-bezier(.55,0,.1,1)");
         //var e = document.body;
         document.body.children[0].parentNode.insertBefore(html, document.body.children[0]);
         //e.prependChild(html);
