@@ -13,12 +13,6 @@ return [
             'domain' => 'engadget'
         ],
 
-    'hackernews' =>
-        [
-            'name' => 'Hacker News',
-            'domain' => 'ycombinator'
-        ],
-
     'huffingtonpost' =>
         [
             'name' => 'The Huffington Post',
@@ -65,6 +59,12 @@ return [
         [
             'name' => 'The Verge',
             'domain' => 'verge'
+        ],
+
+    'ycombinator' =>
+        [
+            'name' => 'Hacker News',
+            'domain' => 'ycombinator'
         ]
 
 ];

@@ -28,7 +28,8 @@ Route::group([
     'namespace' => 'V1',
     'prefix' => 'v1'
 ], function(){
-    Route::get('bar/{domain?}/{referrer?}.html', ['uses' => 'BarController@showBar']);
+    Route::get('bar/{domain?}/{referrer?}.html', ['uses' => 'BarController@showBar'])
+        ->where('referrer', '(.*)');
 });
 
 

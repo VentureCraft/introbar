@@ -8,24 +8,35 @@ class BarController extends Controller {
 
     public function showBar($uid, $referrer)
     {
-        $site = Site::with(['referrers' => function($query) use($referrer){
-            $query->where('domain', 'like', '%'.$referrer.'%');
-        }])->whereUid($uid)->first();
 
-        if (!$site->subscribed() && !$site->referrers->count() > 0) {
+        $site = Site::with(['referrers'])->whereUid($uid)->first();
+
+        if (!$site->subscribed() && $site->referrers->count() !== 1) {
             // check they don't have more referrers than they should
             return $this->returnNothing();
         }
+
+        $referrer = $site->referrers->filter(function($ref) use ($referrer){
+            return strpos($ref, $referrer);
+        })->first();
+
+        if (!$referrer) {
+            // no referrer... :(
+            return $this->returnNothing();
+        }
+
 
         if (!$site->subscribed() && !array_key_exists($referrer, config('referrers'))) {
             // check they don't have custom if they aren't paying
             return $this->returnNothing();
         }
 
+        $template = $referrer->custom?'custom':$referrer->type;
+
         try {
-            $html = view('v1.templates.' . $referrer)
+            $html = view('v1.templates.' . $template)
                 ->withWhitelabel($site->subscribed())
-                ->withReferrer($site->referrers[0])
+                ->withReferrer($referrer)
                 ->withSticky(false);
             $response = Response::make($html);
             $response = $this->allowOriginHeaders($response);
