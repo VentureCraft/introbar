@@ -42,7 +42,7 @@ class TwitterController extends Controller
         $new_user->name = $user->getName();
         $new_user->save();
 
-        $new_user = User::whereTwitterId($user->getId())->first();
+        $new_user = User::whereTwitterId($new_user->twitter_id)->first();
 
         if ($is_new_user) {
             $site = Site::create([
