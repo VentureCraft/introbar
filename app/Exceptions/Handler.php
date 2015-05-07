@@ -1,6 +1,12 @@
 <?php namespace App\Exceptions;
 
+use App;
+use Auth;
+use Config;
 use Exception;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Html;
+use Rollbar;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -28,10 +34,10 @@ class Handler extends ExceptionHandler
         if (!Config::get('app.debug') && $e->getStatusCode() != '404') {
 
             $conf = [
-                'access_token' => Config::get('services.rollbar.access_token'),
+                'access_token' => config('services.rollbar.access_token'),
                 'environment' => App::environment(),
                 'root' => app_path(),
-                'code_version' => Html::gitVersion()
+                'code_version' => HtmlBuilder::gitVersion()
             ];
 
             if (Auth::check()) {
