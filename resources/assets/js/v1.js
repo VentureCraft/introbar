@@ -46,7 +46,7 @@ IntroBar.Embed = function() {
                     document.getElementById("the-intro-bar").innerHTML = xmlhttp.responseText;
                     setTimeout(function(){
                         var thebar = document.getElementById("the-intro-bar");
-                        thebar.style.visibility = "visible";
+                        //thebar.style.visibility = "visible";
                         thebar.style.position = "relative";
                         var closebtn = document.getElementById("ib-close");
                         if (closebtn === null) {
@@ -83,11 +83,9 @@ IntroBar.Embed = function() {
         html.id = "the-intro-bar";
         html.style.visibility = "hidden";
         html.style.overflow = "hidden";
-        html.style.position = "fixed";
+        html.style.width = "100%";
 
-        //var e = document.body;
         document.body.children[0].parentNode.insertBefore(html, document.body.children[0]);
-        //e.prependChild(html);
         injectBar(IntroBar.base_url + '/v1/bar/' + IntroBar.account_id + '/' + referrer + '.html');
     };
 
