@@ -35,7 +35,7 @@
 
                 <div>
                     <label for="header" class="{{ $errors->has('header')?'error':'' }}">Header
-                        {!! Form::text('header', null, ['placeholder' => 'e.g., Welcome from xyw.com!']) !!}
+                        {!! Form::textarea('header', null, ['class' => 'wysiwyg', 'placeholder' => 'e.g., Welcome from xyw.com!']) !!}
                     </label>
                     @if($errors->has('header'))
                         <small class="error">{{ $errors->first('header') }}</small>
@@ -43,7 +43,7 @@
                 </div>
                 <div>
                     <label for="message" class="{{ $errors->has('message')?'error':'' }}">Message (optional)
-                        {!! Form::text('message', null, ['placeholder' => 'e.g., Use coupon code 1234 for mega discounts :)']) !!}
+                        {!! Form::textarea('message', null, ['class' => 'wysiwyg', 'placeholder' => 'e.g., Use coupon code 1234 for mega discounts :)']) !!}
                     </label>
                     @if($errors->has('message'))
                         <small class="error">{{ $errors->first('message') }}</small>
