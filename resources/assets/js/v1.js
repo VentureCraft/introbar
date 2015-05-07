@@ -46,27 +46,17 @@ IntroBar.Embed = function() {
                     document.getElementById("the-intro-bar").innerHTML = xmlhttp.responseText;
                     setTimeout(function(){
                         var thebar = document.getElementById("the-intro-bar");
-                        var maxheight = getComputedStyle(thebar).height;
-                        thebar.style.visibility = "visible";
-                        thebar.style.maxHeight = "0px";
+                        //thebar.style.visibility = "visible";
                         thebar.style.position = "relative";
-                        thebar.style.setProperty("transition", "height 0.8s linear, max-height 0.8s linear");
-                        thebar.style.setProperty("-webkit-transition", "height 0.8s linear, max-height 0.8s linear");
-                        thebar.style.setProperty("transition-timing-function", "cubic-bezier(.55,0,.1,1)");
-                        thebar.style.setProperty("-webkit-transition-timing-function", "cubic-bezier(.55,0,.1,1)");
                         var closebtn = document.getElementById("ib-close");
                         if (closebtn === null) {
                             return;
                         }
                         addEventListener(closebtn, 'click', function(){
-                            //closebtn.style.display = 'none';
                             thebar.style.maxHeight = getComputedStyle(thebar).height;
                             thebar.offsetHeight;
                             thebar.style.maxHeight = '0px';
                         });
-                        setTimeout(function() {
-                            thebar.style.maxHeight = maxheight;
-                        },10);
                     }, 10);
                 }
             }
@@ -89,19 +79,13 @@ IntroBar.Embed = function() {
     };
 
     var loadIntroBar = function(domain, referrer){
-        //loadStyle(IntroBar.base_url + 'css/v1.css');
         var html = document.createElement("div");
         html.id = "the-intro-bar";
-        //html.style.display = "none";
-        //html.style.maxHeight = "0px";
         html.style.visibility = "hidden";
         html.style.overflow = "hidden";
-        html.style.position = "fixed";
+        html.style.width = "100%";
 
-
-        //var e = document.body;
         document.body.children[0].parentNode.insertBefore(html, document.body.children[0]);
-        //e.prependChild(html);
         injectBar(IntroBar.base_url + '/v1/bar/' + IntroBar.account_id + '/' + referrer + '.html');
     };
 
