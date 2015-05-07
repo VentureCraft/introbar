@@ -17,7 +17,7 @@ class BarController extends Controller {
         }
 
         $referrer = $site->referrers->filter(function($ref) use ($referrer){
-            return strpos($ref, $referrer);
+            return strpos($ref, $referrer) !== false;
         })->first();
 
         if (!$referrer) {

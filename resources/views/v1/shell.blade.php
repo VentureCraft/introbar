@@ -78,10 +78,15 @@
              }
          }
 
+    #the-intro-bar #ib-header a,
+    #the-intro-bar #ib-message a {
+        color: #FFF;
+        text-decoration: none;
+        border-bottom: 1px solid #FFF;
+    }
     #the-intro-bar #ib-content p {
         margin: 5px 0;
         color: #FFF;
-
     }
     #the-intro-bar #ib-content #ib-close {
         width: 20px;
