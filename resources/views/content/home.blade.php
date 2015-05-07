@@ -125,7 +125,7 @@
 
                 </div>
 
-                <a class="button radius expand" href="auth/register">Register now</a>
+                <a class="round button" href="auth/register">Register now</a>
 
             </div>
 
