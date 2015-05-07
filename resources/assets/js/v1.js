@@ -7,7 +7,7 @@ IntroBar.Embed = function() {
     var getMyDomain = function(){
         var url = document.location.href;
         domain = url.match(/:\/\/(.[^/]+)/)[1];
-        return domain;
+        return getDomain(domain);
     };
 
     function getParameterByName(name) {
