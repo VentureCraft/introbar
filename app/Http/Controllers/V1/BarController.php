@@ -22,7 +22,7 @@ class BarController extends Controller {
 
         if (!$referrer) {
             // no referrer... :(
-            return $this->returnNothing();
+            // return $this->returnNothing();
         }
 
 
@@ -33,7 +33,7 @@ class BarController extends Controller {
 
         $template = $referrer->custom?'custom':$referrer->type;
 
-        try {
+        // try {
             $html = view('v1.templates.' . $template)
                 ->withWhitelabel(false)
                 ->withReferrer($referrer)
@@ -42,9 +42,9 @@ class BarController extends Controller {
             $response = $this->allowOriginHeaders($response);
             $response->header('Content-Length', strlen($response->getContent()));
             return $response;
-        } catch (\Exception $e) {
-            return $this->returnNothing();
-        }
+        // } catch (\Exception $e) {
+            // return $this->returnNothing();
+        // }
     }
 
     public function returnNothing()
