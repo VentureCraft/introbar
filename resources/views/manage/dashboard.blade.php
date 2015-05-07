@@ -26,6 +26,13 @@
 
             @if($site->referrers->count() > 0)
                 <h2>Your intro bars</h2>
+            @else
+                <div class="alert-box info radius">
+                    <h2>Welcome :) What now?</h2>
+                    <p>Adding your first IntroBar is super easy, just click on one of the options below to get started!</p>
+                    <p>Seriously, it'll take you less than a minute.</p>
+                    <p>Then just pop this code on your site and you're done! <a class="tiny radius success button" href="#" data-reveal-id="installation-modal">Installation Instructions</a></p>
+                </div>
             @endif
             @foreach($site->referrers as $referrer)
                 <div class="referrer">
