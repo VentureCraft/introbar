@@ -16,6 +16,10 @@
     <style>
         #the-intro-bar {
             position: relative;
+            -webkit-transition: max-height .5s ease-in-out; /* Safari */
+            transition: max-height .5s ease-in-out;
+            transition-timing-function: cubic-bezier(.55,0,.1,1);
+            -webkit-transition-timing-function: cubic-bezier(.55,0,.1,1);
             /*overflow: hidden;*/
         }
         #the-intro-bar #ib-content {
