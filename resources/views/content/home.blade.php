@@ -21,9 +21,12 @@
 
                 <div class="row">
 
+                    <div class="columns medium-12">
+                        <a class="small secondary button round" href="#" data-elevio-inline="9967">See how it works</a>
+                    </div>
 
                     <div class="columns medium-12">
-                        <a class="button radius expand" href="auth/register">And it's FREE! Register now</a>
+                        <a class="button radius expand" href="auth/register">Register now... it's FREE!</a>
                     </div>
 
                 </div>
@@ -118,10 +121,11 @@
                 <div class="price">
 
                     <div class="amount">FREE</div>
+                    <div class="extra">...awesome</div>
 
                 </div>
 
-                <a class="button radius small" href="/auth/register">Get Started</a>
+                <a class="button radius expand" href="auth/register">Register now</a>
 
             </div>
 
