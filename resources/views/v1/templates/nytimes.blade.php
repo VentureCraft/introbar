@@ -1,21 +1,23 @@
 @extends('v1.shell')
 
 @section('style')
+
     <style>
         #the-intro-bar #ib-content {
             background-color: #000;
         }
 
-        #the-intro-bar #ib-content #ib-header
+        #the-intro-bar #ib-content #ib-header p
          {
             color: #fff;
-            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
         }
 
-        #the-intro-bar #ib-content #ib-message {
+        #the-intro-bar #ib-content #ib-message p {
             color: #fff;
-            font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-            font-weight: normal;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 300;
         }
     </style>
 @stop
