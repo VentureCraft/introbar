@@ -29,6 +29,7 @@ elixir(function(mix) {
         '../../../bower_components/fastclick/lib/fastclick.js',
         '../../../bower_components/foundation/js/foundation/foundation.js',
         '../../../bower_components/foundation/js/foundation/foundation.reveal.js',
+        'redactor/redactor.js',
         'frontend.js'
     ], 'public/js/frontend.js');
 

@@ -26,17 +26,22 @@
     }
 
 
-    #the-intro-bar #ib-content #ib-header{
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 38px;
-    }
-    #the-intro-bar #ib-content #ib-message{
-        font-size: 20px;
+    #the-intro-bar a {
+        color: #FFF;
+        text-decoration: none;
+        border-bottom: 1px solid #FFF;
     }
     #the-intro-bar p {
         margin: 5px 0;
         color: #FFF;
+    }
+    #the-intro-bar #ib-content #ib-header p {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 38px;
+    }
+    #the-intro-bar #ib-content #ib-message p{
+        font-size: 20px;
     }
     #ib-close {
         width: 20px;
@@ -69,8 +74,8 @@
     <div id="ib-close"></div>
     @yield('content')
 
-    <p id="ib-header">{{ $referrer->header }}</p>
+    <div id="ib-header">{!! $referrer->header !!}</div>
     @if($referrer->message)
-        <p id="ib-message">{{ $referrer->message }}</p>
+        <div id="ib-message">{!! $referrer->message !!}</div>
     @endif
 </div>

@@ -20,4 +20,9 @@ $().ready(function () {
         showInput: true
     });
 
+
+    $('.wysiwyg').redactor({
+        buttons: ['bold', 'italic', 'link']
+    });
+
 });
