@@ -7,11 +7,8 @@
 @section('style')
     <style>
         #the-intro-bar #ib-content {
-            background-color: green;
+            background-color: {{ $referrer->background_color }};
+            color: {{ $referrer->text_color }};
         }
     </style>
-@stop
-
-@section('content')
-    <p>Welcome from custom!!!</p>
 @stop
