@@ -19,6 +19,8 @@ Route::post('queue/receive', function()
 
 Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'site.index']);
 
+Route::get('test',['uses' => 'WelcomeController@test']);
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

@@ -34,4 +34,9 @@ class WelcomeController extends Controller
         return view('content.home');
     }
 
+    public function test()
+    {
+        return view('content.test');
+    }
+
 }
