@@ -49,6 +49,11 @@ IntroBar.Embed = function() {
                         var maxheight = getComputedStyle(thebar).height;
                         thebar.style.visibility = "visible";
                         thebar.style.maxHeight = "0px";
+                        thebar.style.position = "relative";
+                        thebar.style.setProperty("transition", "height 0.8s linear, max-height 0.8s linear");
+                        thebar.style.setProperty("-webkit-transition", "height 0.8s linear, max-height 0.8s linear");
+                        thebar.style.setProperty("transition-timing-function", "cubic-bezier(.55,0,.1,1)");
+                        thebar.style.setProperty("-webkit-transition-timing-function", "cubic-bezier(.55,0,.1,1)");
                         var closebtn = document.getElementById("ib-close");
                         if (closebtn === null) {
                             return;
@@ -59,8 +64,10 @@ IntroBar.Embed = function() {
                             thebar.offsetHeight;
                             thebar.style.maxHeight = '0px';
                         });
-                        thebar.style.maxHeight = maxheight;
-                    }, 1);
+                        setTimeout(function() {
+                            thebar.style.maxHeight = maxheight;
+                        },10);
+                    }, 10);
                 }
             }
         };
@@ -89,10 +96,8 @@ IntroBar.Embed = function() {
         //html.style.maxHeight = "0px";
         html.style.visibility = "hidden";
         html.style.overflow = "hidden";
-        html.style.setProperty("transition", "height 0.8s linear, max-height 0.8s linear");
-        html.style.setProperty("-webkit-transition", "height 0.8s linear, max-height 0.8s linear");
-        html.style.setProperty("transition-timing-function", "cubic-bezier(.55,0,.1,1)");
-        html.style.setProperty("-webkit-transition-timing-function", "cubic-bezier(.55,0,.1,1)");
+        html.style.position = "fixed";
+
 
         //var e = document.body;
         document.body.children[0].parentNode.insertBefore(html, document.body.children[0]);

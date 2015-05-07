@@ -70,7 +70,7 @@ _elev.account_id = '5549f860cc906';
 </script>
 
 <script>
-    @if(false && App::environment('local'))
+    @if(App::environment('local'))
     var _intro_bar = window._intro_bar || {};(
         function() {
             var i,e;
