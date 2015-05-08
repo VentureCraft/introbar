@@ -22,7 +22,18 @@ $().ready(function () {
 
 
     $('.wysiwyg').redactor({
-        buttons: ['bold', 'italic', 'link']
+        buttons: ['bold', 'italic', 'link'],
+        tabKey: false
+    });
+
+    $(".delete-action").click(function (e) {
+        e.preventDefault();
+
+        var popup = $(this).attr('data-popup');
+        var id = $(this).attr('data-id');
+
+        $("#"+popup + " #delete-id").val(id);
+        $("#"+popup).foundation('reveal', 'open');
     });
 
 });

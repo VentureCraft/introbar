@@ -7,8 +7,15 @@
 @section('title', 'Edit ' . ($referrer->custom?'custom':config('referrers.' . $referrer->type . '.name')) . ' intro bar')
 
 @section('content')
+
+<section id="backend">
+
+
+
     <div class="row">
         <div class="columns">
+
+            <a class="button radius small" href="{{ route('dashboard') }}">Back</a>
 
             <h1>Edit {{ $referrer->custom?'custom':config('referrers.' . $referrer->type . '.name') }} intro bar</h1>
             <div>
@@ -82,4 +89,6 @@
             </div>
         </div>
     </div>
+
+</section>
 @stop

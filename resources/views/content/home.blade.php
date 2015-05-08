@@ -55,7 +55,7 @@
                 <h4>Make the most of your traffic by giving your visitors custom intros and offers based on the
                     where they came from.</h4>
 
-                <p><a class="button tiny secondary radius" href="{{ route('site.index') }}?ref=producthunt">See a
+                <p><a class="button small secondary radius" href="{{ route('site.index') }}?ref=producthunt">See a
                         demo</a></p>
 
 

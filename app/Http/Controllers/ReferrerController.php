@@ -115,9 +115,9 @@ class ReferrerController extends Controller
      * @param  int $id
      * @return Response
      */
-    public function destroy(Requests\DeleteReferrerRequest $request, $referrer_id)
+    public function destroy(Requests\DeleteReferrerRequest $request)
     {
-        Referrer::find($referrer_id)->delete();
+        Referrer::find($request->input('referrer_id'))->delete();
 
         Notification::success('Intro bar deleted, it may take some time for the cache to clear');
         return redirect()->route('dashboard');

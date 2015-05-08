@@ -86,7 +86,7 @@ _elev.account_id = '5549f860cc906';
         var _intro_bar = window._intro_bar || {};(
         function() {var i,e;i=document.createElement("script"), i.type='text/javascript';i.async=1, i.src="//cdn.introbar.com/js/v1.js", e=document.getElementsByTagName("script")[0], e.parentNode.insertBefore(i,e);})();
     @endif
-    _intro_bar.account_id = '5549f860cc906';
+    _intro_bar.account_id = '{{ Input::has('account_id')?Input::get('account_id'):'5549f860cc906' }}';
 </script>
 
 </body>

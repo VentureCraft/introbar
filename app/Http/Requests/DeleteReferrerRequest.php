@@ -14,7 +14,7 @@ class DeleteReferrerRequest extends Request
      */
     public function authorize()
     {
-        $referrer = Referrer::find($this->route('referrer_id'));
+        $referrer = Referrer::find($this->input('referrer_id'));
         if (!$referrer || $referrer->site->user_id != Auth::user()->id) {
             return false;
         }

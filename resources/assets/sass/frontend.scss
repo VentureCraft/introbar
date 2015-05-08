@@ -67,8 +67,13 @@ body {
 }
 
 #header {
-
+  background-color: scale_color($body-bg,$lightness: -2%);
   padding: rem-calc(40 0);
+  border-bottom: 1px solid scale_color($secondary-color, $lightness: 80%);
+
+  .button {
+    margin: 0;
+  }
 
   .logo {
 
@@ -208,3 +213,64 @@ div#elevio-widget-container.open .powered-by {
     }
   }
 }
+
+
+#backend {
+  padding: rem-calc(60 0);
+
+  h3 {
+    font-weight: $font-weight-light;
+    margin-bottom: rem-calc(40);
+  }
+
+    .referrers {
+
+      .button {
+        margin-bottom: rem-calc(5);
+      }
+
+    }
+
+    .introbars {
+
+      .introbar {
+
+        background-color: scale-color($body-bg,$lightness: -5%);
+        @include single-transition(background-color);
+        margin-bottom: rem-calc(10);
+        padding: rem-calc(10 20 10 20);
+
+        &:hover {
+          background-color: $white;
+        }
+
+        .introbar--site {
+          float: left;
+
+          p {
+            margin: 0;
+            margin-top: rem-calc(6);
+            line-height: rem-calc(16);
+            font-size: rem-calc(16);
+            font-weight: $font-weight-bold;
+          }
+        }
+
+        .introbar--actions {
+          float: right;
+
+          ul {
+            line-height: 0;
+          }
+
+          .button {
+            margin: 0;
+            font-weight: $font-weight-bold;
+          }
+        }
+
+      }
+
+    }
+
+  }

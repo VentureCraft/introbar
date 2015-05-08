@@ -55,5 +55,5 @@ Route::group([
     Route::post('site/{site_uid}/add_referrer/{referrer_type}', ['uses' => 'ReferrerController@store', 'as' => 'referrer.store']);
     Route::get('referrer/{referrer_id}/edit', ['uses' => 'ReferrerController@edit', 'as' => 'referrer.edit']);
     Route::post('referrer/{referrer_id}/edit', ['uses' => 'ReferrerController@update', 'as' => 'referrer.update']);
-    Route::delete('referrer/{referrer_id}', ['uses' => 'ReferrerController@destroy', 'as' => 'referrer.destroy']);
+    Route::delete('referrer', ['uses' => 'ReferrerController@destroy', 'as' => 'referrer.destroy']);
 });
