@@ -1,7 +1,7 @@
 var IntroBar = IntroBar || {};
 
 IntroBar.Embed = function() {
-    IntroBar.base_url = window._intro_bar.base_url || 'http://cdn.introbar.com';
+    IntroBar.base_url = window._intro_bar.base_url || '//cdn.introbar.com';
     IntroBar.account_id = window._intro_bar.account_id || null;
 
     var getMyDomain = function(){
