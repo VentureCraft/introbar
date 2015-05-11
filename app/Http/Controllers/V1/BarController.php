@@ -59,7 +59,7 @@ class BarController extends Controller {
     {
         $response->header('P3P', 'CP="CAO DSP COR CURa ADMa DEVa OUR IND PHY ONL UNI COM NAV INT DEM PRE IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"');
         $response->header('Access-Control-Allow-Origin', '*');
-        $response->header('Access-Control-Allow-Headers', 'P3P, Content-Type, Origin');
+        $response->header('Access-Control-Allow-Headers', 'P3P, Content-Type, Origin, Accept-Encoding');
         return $response;
     }
 
