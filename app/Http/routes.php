@@ -30,6 +30,8 @@ Route::group([
 ], function(){
     Route::get('bar/{domain?}/{referrer?}.html', ['uses' => 'BarController@showBar'])
         ->where('referrer', '(.*)');
+    Route::options('bar/{domain?}/{referrer?}.html', ['uses' => 'BarController@options'])
+        ->where('referrer', '(.*)');
 });
 
 Route::group([

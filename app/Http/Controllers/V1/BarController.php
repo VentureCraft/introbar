@@ -47,6 +47,14 @@ class BarController extends Controller {
         }
     }
 
+    public function options()
+    {
+        $response = Response::make('');
+        $response = $this->allowOriginHeaders($response);
+        $response->header('Content-Length', strlen($response->getContent()));
+        return $response;
+    }
+
     public function returnNothing()
     {
         $response = Response::make('');
