@@ -8,7 +8,9 @@
     <style>
         #the-intro-bar #ib-content {
             background-color: {{ $referrer->background_color }};
-            color: {{ $referrer->text_color }};
+        }
+        #the-intro-bar #ib-content p {
+            color: {{ $referrer->text_color }} !important;
         }
     </style>
 @stop

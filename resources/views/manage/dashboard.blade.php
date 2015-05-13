@@ -84,9 +84,7 @@
 
                     <div class="introbar--actions">
                         <ul class="button-group round">
-                            @if($site->url)
                             <li><a class="right tiny info radius button" href="?ref={{ $referrer->domain}}&account_id={{ $site->uid }}">Preview</a></li>
-                            @endif
                             <li><a class="right tiny info radius button" href="{{ route('referrer.edit', $referrer->id) }}">Edit</a></li>
                             <li><a class="right tiny alert radius button delete-action" href="#" data-id="{{ $referrer->id }}" data-popup="delete-modal">Delete</a></li>
                         </ul>

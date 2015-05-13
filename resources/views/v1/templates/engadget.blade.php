@@ -10,16 +10,12 @@
             background-size: 15%;
         }
 
-        #the-intro-bar #ib-content #ib-header p
-         {
+        #the-intro-bar #ib-content #ib-header p {
             color: #39c;
-
         }
 
-        #the-intro-bar #ib-content #ib-message p
-                 {
-                    color: #fff;
-
-                }
+        #the-intro-bar #ib-content #ib-message p {
+            color: #fff;
+        }
     </style>
 @stop

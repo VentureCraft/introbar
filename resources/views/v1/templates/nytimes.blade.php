@@ -7,8 +7,7 @@
             background-color: #000;
         }
 
-        #the-intro-bar #ib-content #ib-header p
-         {
+        #the-intro-bar #ib-content #ib-header p {
             color: #fff;
             font-family: 'Roboto Slab', serif;
             font-weight: 700;
