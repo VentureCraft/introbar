@@ -31,7 +31,7 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
-        if (true || !Config::get('app.debug') && $e->getStatusCode() != '404') {
+        if (!Config::get('app.debug') && $e->getStatusCode() != '404') {
 
             $conf = [
                 'access_token' => config('services.rollbar.access_token'),
