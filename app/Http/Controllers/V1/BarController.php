@@ -17,7 +17,12 @@ class BarController extends Controller {
         // }
 
         $referrer = $site->referrers->filter(function($ref) use ($referrer){
-            return strpos($ref->domain, $referrer) !== false;
+            if ($ref->domain === $domain) {
+                return true;
+            } else if ($domain === substr($ref->domain, 0, strpos($ref->domain, '.'))) {
+                return true;
+            }
+            return false;
         })->first();
 
         if (!$referrer) {
