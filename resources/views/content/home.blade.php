@@ -52,7 +52,7 @@
             <div class="columns medium-4">
 
 
-                <h4>Make the most of your traffic by giving your visitors custom intros and offers based on the
+                <h4>Make the most of your traffic by giving your visitors custom intros and offers based on
                     where they came from.</h4>
 
                 <p><a class="button small secondary radius" href="{{ route('site.index') }}?ref=producthunt">See a
