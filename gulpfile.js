@@ -16,7 +16,7 @@ elixir(function(mix) {
 
     mix.sass([
         'frontend.scss'
-    ]);
+    ], 'frontend.css');
 
     mix.scripts([
         'v1.js'
