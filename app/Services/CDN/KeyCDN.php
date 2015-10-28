@@ -24,9 +24,17 @@ class KeyCDN implements CDNInterface
         $this->zone_url = config('services.keycdn.zone_url');
     }
 
-    public function purgeFile($fileName) {
-        $fileName = $this->zone_url . $fileName;
-        return $this->get('zones/purgeurl/'.$this->zone_id.'.json?path=' . $fileName);
+    public function purgeFile($fileNames) {
+        if (!is_array($fileNames)) {
+            $fileNames = array($fileNames);
+        }
+
+        $queryparts = [];
+        foreach ($fileNames as $index => $fileName) {
+            $queryparts[] = $this->zone_url . $fileName;
+        }
+
+        return $this->delete('zones/purgeurl/'.$this->zone_id.'.json?', ['urls' => $queryparts]);
     }
 
     public function get($selected_call, $params = array()) {
