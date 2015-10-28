@@ -12,16 +12,14 @@ use Config;
 class KeyCDN implements CDNInterface
 {
 
-    public $username;
-    public $password;
+    public $api_key;
     public $zone_id;
     public $zone_url;
     public $KeyCDN_api = 'https://www.keycdn.com';
 
 
     public function __construct() {
-        $this->username = config('services.keycdn.username');
-        $this->password = config('services.keycdn.password');
+        $this->api_key = config('services.keycdn.api_key');
         $this->zone_id = config('services.keycdn.zone_id');
         $this->zone_url = config('services.keycdn.zone_url');
     }
@@ -56,7 +54,7 @@ class KeyCDN implements CDNInterface
         $ch = curl_init();
 
         // create basic auth information
-        curl_setopt($ch, CURLOPT_USERPWD, $this->username . ':' . $this->password);
+        curl_setopt($ch, CURLOPT_USERPWD, $this->api_key . ':');
 
         // return transfer as string
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

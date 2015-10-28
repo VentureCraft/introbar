@@ -30,8 +30,7 @@ return [
     ],
 
     'keycdn' => array(
-        'username' => env('KEYCDN_USERNAME'),
-        'password' => env('KEYCDN_PASSWORD'),
+        'api_key' => env('KEYCDN_APIKEY'),
         'zone_id' => env('KEYCDN_ZONEID'),
         'zone_url' => 'introbar-b16.kxcdn.com/'
     ),
