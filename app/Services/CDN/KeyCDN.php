@@ -15,7 +15,7 @@ class KeyCDN implements CDNInterface
     public $api_key;
     public $zone_id;
     public $zone_url;
-    public $KeyCDN_api = 'https://www.keycdn.com';
+    public $KeyCDN_api = 'https://api.keycdn.com';
 
 
     public function __construct() {
